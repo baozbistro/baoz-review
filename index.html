@@ -25,19 +25,20 @@
     .container {
       width: min(94%, 560px);
       margin: 0 auto;
-      padding-bottom: 55px;
+      padding-bottom: 50px;
     }
 
     /* HERO */
 
     .hero {
       position: relative;
-      height: 320px;
+      height: 315px;
+
       background:
         linear-gradient(
           to bottom,
-          rgba(0,0,0,0.10),
-          rgba(0,0,0,0.50)
+          rgba(0,0,0,0.05),
+          rgba(0,0,0,0.48)
         ),
         url("indoor.png") center center / cover no-repeat;
 
@@ -54,33 +55,18 @@
       color: white;
     }
 
-    .hero-logo-box {
-      width: 190px;
-      background: rgba(255,255,255,0.94);
-      border-radius: 14px;
-      padding: 10px 14px;
-      margin-bottom: 18px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
-    }
-
-    .hero-logo-box img {
-      width: 100%;
+    .hero-logo {
+      width: 180px;
       display: block;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      margin: 0 0 8px;
-      font-size: 31px;
-      line-height: 1.12;
-      font-weight: 700;
-    }
-
-    .hero p {
       margin: 0;
-      max-width: 420px;
-      font-size: 15px;
-      line-height: 1.55;
-      color: rgba(255,255,255,0.93);
+      font-size: 31px;
+      line-height: 1.15;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
     }
 
     /* CARD */
@@ -89,7 +75,7 @@
       background: #ffffff;
       border-radius: 22px;
       padding: 23px 19px;
-      margin: 0 0 18px;
+      margin-bottom: 18px;
       box-shadow: 0 6px 22px rgba(40,35,25,0.07);
     }
 
@@ -128,10 +114,11 @@
     }
 
     .option {
-      min-height: 52px;
+      min-height: 54px;
       display: flex;
       align-items: center;
       justify-content: center;
+
       padding: 11px 8px;
 
       border: 1.5px solid #ddd9ce;
@@ -160,7 +147,7 @@
       font-weight: 700;
     }
 
-    /* BUTTONS */
+    /* BUTTON */
 
     .generate-btn {
       width: 100%;
@@ -174,6 +161,7 @@
 
       font-size: 16px;
       font-weight: 700;
+
       cursor: pointer;
       transition: 0.2s;
     }
@@ -217,6 +205,7 @@
 
       font-size: 14px;
       font-weight: 700;
+
       cursor: pointer;
     }
 
@@ -231,6 +220,7 @@
 
       font-size: 14px;
       font-weight: 600;
+
       cursor: pointer;
     }
 
@@ -249,6 +239,7 @@
 
       gap: 10px;
       padding: 16px;
+
       border-radius: 14px;
 
       text-decoration: none;
@@ -283,32 +274,15 @@
       font-size: 21px;
     }
 
-    /* NOTE */
-
-    .note {
-      margin-top: 15px;
-      padding: 12px 14px;
-
-      border-radius: 12px;
-      background: #f5f3ed;
-
-      color: #77756c;
-      font-size: 12px;
-      line-height: 1.55;
-    }
-
     /* FOOTER */
 
     .footer {
       padding: 12px 20px 0;
       text-align: center;
-
       color: #939187;
       font-size: 12px;
       line-height: 1.6;
     }
-
-    /* MOBILE */
 
     @media (max-width: 430px) {
 
@@ -320,8 +294,8 @@
         font-size: 27px;
       }
 
-      .hero-logo-box {
-        width: 165px;
+      .hero-logo {
+        width: 160px;
       }
 
       .card {
@@ -329,15 +303,12 @@
       }
 
     }
-
   </style>
 </head>
-
 
 <body>
 
 <div class="container">
-
 
   <!-- HERO -->
 
@@ -345,19 +316,13 @@
 
     <div class="hero-content">
 
-      <div class="hero-logo-box">
-        <img
-          src="baoz-logo.png"
-          alt="Bao.Z Dumpling & Noodle Bistro"
-        >
-      </div>
+      <img
+        class="hero-logo"
+        src="baoz-logo.png"
+        alt="Bao.Z Dumpling & Noodle Bistro"
+      >
 
       <h1>How was your visit?</h1>
-
-      <p>
-        Tell us what stood out during your visit.
-        We'll help you turn your experience into a review you can edit and share.
-      </p>
 
     </div>
 
@@ -370,14 +335,52 @@
 
     <span class="step">STEP 1</span>
 
+    <h2>What stood out to you?</h2>
+
+    <p class="instruction">
+      Select at least one.
+    </p>
+
+    <div class="option-grid" id="step1">
+
+      <div class="option" data-value="taste">
+        Great Taste
+      </div>
+
+      <div class="option" data-value="service">
+        Friendly Service
+      </div>
+
+      <div class="option" data-value="atmosphere">
+        Nice Atmosphere
+      </div>
+
+      <div class="option" data-value="fresh">
+        Fresh Ingredients
+      </div>
+
+      <div class="option" data-value="recommend">
+        Recommended by Others
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- STEP 2 -->
+
+  <section class="card">
+
+    <span class="step">STEP 2</span>
+
     <h2>What did you enjoy?</h2>
 
     <p class="instruction">
-      Select one or more things that matched your experience.
+      Select at least one.
     </p>
 
-
-    <div class="option-grid">
+    <div class="option-grid" id="step2">
 
       <div class="option" data-value="dumplings">
         Dumplings
@@ -387,32 +390,58 @@
         Noodles
       </div>
 
-      <div class="option" data-value="food">
-        Food & Flavor
+      <div class="option" data-value="buns">
+        Pan-Fried Buns
+      </div>
+
+      <div class="option" data-value="wontons">
+        Wontons
       </div>
 
       <div class="option" data-value="drinks">
         Drinks
       </div>
 
-      <div class="option" data-value="service">
-        Friendly Service
+    </div>
+
+  </section>
+
+
+  <!-- STEP 3 -->
+
+  <section class="card">
+
+    <span class="step">STEP 3</span>
+
+    <h2>Add a short phrase</h2>
+
+    <p class="instruction">
+      Optional — choose one if you'd like.
+    </p>
+
+    <div class="option-grid" id="step3">
+
+      <div class="option" data-value="delicious">
+        Delicious & Fresh
       </div>
 
-      <div class="option" data-value="atmosphere">
-        Atmosphere
+      <div class="option" data-value="value">
+        Great Value
       </div>
 
-      <div class="option" data-value="fresh">
-        Fresh Ingredients
+      <div class="option" data-value="comfortable">
+        Comfortable & Relaxing
+      </div>
+
+      <div class="option" data-value="family">
+        Great for Family & Friends
       </div>
 
       <div class="option" data-value="return">
-        Would Visit Again
+        Can't Wait to Come Back
       </div>
 
     </div>
-
 
     <button
       class="generate-btn"
@@ -424,21 +453,20 @@
   </section>
 
 
-  <!-- STEP 2 -->
+  <!-- REVIEW -->
 
   <section
     class="card"
     id="reviewSection"
   >
 
-    <span class="step">STEP 2</span>
+    <span class="step">YOUR REVIEW</span>
 
     <h2>Your review draft</h2>
 
     <p class="instruction">
-      Feel free to edit the wording so it accurately reflects your own experience.
+      Feel free to edit it so it matches your own experience.
     </p>
-
 
     <div
       class="review-box"
@@ -446,14 +474,12 @@
       contenteditable="true"
     ></div>
 
-
     <button
       class="copy-btn"
       onclick="copyReview()"
     >
       Copy Review
     </button>
-
 
     <button
       class="regenerate-btn"
@@ -465,18 +491,9 @@
   </section>
 
 
-  <!-- STEP 3 -->
+  <!-- GOOGLE / YELP -->
 
   <section class="card">
-
-    <span class="step">STEP 3</span>
-
-    <h2>Share your experience</h2>
-
-    <p class="instruction">
-      Copy your review first, then choose where you'd like to post it.
-    </p>
-
 
     <div class="platform-buttons">
 
@@ -486,15 +503,9 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-
-        <span class="google-icon">
-          G
-        </span>
-
-        Review us on Google
-
+        <span class="google-icon">G</span>
+        Continue to Google →
       </a>
-
 
       <a
         class="platform yelp"
@@ -502,55 +513,105 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-
-        <span class="yelp-icon">
-          ★
-        </span>
-
-        Review us on Yelp
-
+        <span class="yelp-icon">★</span>
+        Visit us on Yelp →
       </a>
 
-    </div>
-
-
-    <div class="note">
-      Please edit or change the draft so it accurately reflects your own experience.
     </div>
 
   </section>
 
 
   <div class="footer">
-
     Thank you for supporting Bao.Z<br>
     Dumpling & Noodle Bistro
-
   </div>
-
 
 </div>
 
 
-
 <script>
 
-  const options =
+  const allOptions =
     document.querySelectorAll(".option");
 
+  allOptions.forEach(option => {
 
-  options.forEach(option => {
+    option.addEventListener("click", function() {
 
-    option.addEventListener(
-      "click",
-      function() {
+      const parent = this.parentElement;
 
-        this.classList.toggle("selected");
+      if (parent.id === "step3") {
+
+        parent
+          .querySelectorAll(".option")
+          .forEach(item => {
+
+            if (item !== this) {
+              item.classList.remove("selected");
+            }
+
+          });
 
       }
-    );
+
+      this.classList.toggle("selected");
+
+    });
 
   });
+
+
+  const phrases = {
+
+    taste:
+      "The food had great flavor and was very satisfying.",
+
+    service:
+      "The staff was friendly and welcoming throughout our visit.",
+
+    atmosphere:
+      "The restaurant had a comfortable and inviting atmosphere.",
+
+    fresh:
+      "Everything tasted fresh and thoughtfully prepared.",
+
+    recommend:
+      "We had heard good things about Bao.Z and were happy we gave it a try.",
+
+
+    dumplings:
+      "We especially enjoyed the dumplings — they were juicy, fresh, and cooked nicely.",
+
+    noodles:
+      "The noodles had a great texture and were full of flavor.",
+
+    buns:
+      "The pan-fried buns were one of the highlights of the meal.",
+
+    wontons:
+      "The wontons were flavorful and very satisfying.",
+
+    drinks:
+      "The drinks were refreshing and paired nicely with the food.",
+
+
+    delicious:
+      "Everything felt delicious and fresh.",
+
+    value:
+      "We thought it was a great value for the quality.",
+
+    comfortable:
+      "The whole experience felt comfortable and relaxing.",
+
+    family:
+      "It was a great place to enjoy a meal with family and friends.",
+
+    return:
+      "We would definitely come back again."
+
+  };
 
 
   const openings = [
@@ -559,135 +620,9 @@
 
     "Really enjoyed our visit to Bao.Z.",
 
-    "We had a great meal at Bao.Z and enjoyed our time here.",
+    "We had a great meal at Bao.Z.",
 
-    "Bao.Z was a great spot for a casual meal.",
-
-    "We stopped by Bao.Z and had a very enjoyable experience."
-
-  ];
-
-
-  const phrases = {
-
-
-    dumplings: [
-
-      "The dumplings were fresh, juicy, and had a great texture.",
-
-      "We especially enjoyed the dumplings — they were flavorful and cooked just right.",
-
-      "The dumplings were one of the highlights of our meal.",
-
-      "The dumplings tasted fresh and were very satisfying."
-
-    ],
-
-
-    noodles: [
-
-      "The noodles had a great texture and were well seasoned.",
-
-      "We really enjoyed the noodle dishes and the balance of flavors.",
-
-      "The noodles were comforting, flavorful, and cooked nicely.",
-
-      "The noodle dishes were simple, satisfying, and full of flavor."
-
-    ],
-
-
-    food: [
-
-      "Everything we ordered was flavorful and nicely prepared.",
-
-      "The food was delicious and had a good balance of flavors.",
-
-      "We enjoyed everything we tried and the dishes felt thoughtfully prepared.",
-
-      "The food was satisfying and tasted very fresh."
-
-    ],
-
-
-    drinks: [
-
-      "The drinks were refreshing and paired well with the meal.",
-
-      "We also enjoyed the drinks — refreshing and nicely balanced.",
-
-      "The drinks were a nice addition to the meal.",
-
-      "The drinks were refreshing without being overly sweet."
-
-    ],
-
-
-    service: [
-
-      "The staff was friendly, welcoming, and attentive.",
-
-      "Service was warm and friendly throughout our visit.",
-
-      "Everyone who helped us was kind and welcoming.",
-
-      "The service was attentive and made the meal feel comfortable."
-
-    ],
-
-
-    atmosphere: [
-
-      "The restaurant has a modern, comfortable, and inviting atmosphere.",
-
-      "The dining space felt warm and relaxing.",
-
-      "We really liked the clean and comfortable atmosphere.",
-
-      "The interior has a nice modern look while still feeling welcoming."
-
-    ],
-
-
-    fresh: [
-
-      "The ingredients tasted fresh and carefully prepared.",
-
-      "Everything tasted fresh and well made.",
-
-      "You could really taste the freshness in the dishes.",
-
-      "The ingredients felt fresh and thoughtfully prepared."
-
-    ],
-
-
-    return: [
-
-      "We would definitely come back again.",
-
-      "We are looking forward to visiting again and trying more dishes.",
-
-      "This is definitely a place we would return to.",
-
-      "We will be back to try more of the menu."
-
-    ]
-
-  };
-
-
-  const endings = [
-
-    "Overall, it was a very enjoyable meal.",
-
-    "Overall, we had a great experience.",
-
-    "Definitely worth trying if you're in the area.",
-
-    "We left happy and satisfied with the meal.",
-
-    "A really enjoyable place for dumplings and noodles."
+    "Bao.Z was a great spot for a casual meal."
 
   ];
 
@@ -705,17 +640,52 @@
 
   function generateReview() {
 
-    const selected =
+    const step1Selected =
       document.querySelectorAll(
-        ".option.selected"
+        "#step1 .option.selected"
+      );
+
+    const step2Selected =
+      document.querySelectorAll(
+        "#step2 .option.selected"
+      );
+
+    const step3Selected =
+      document.querySelector(
+        "#step3 .option.selected"
       );
 
 
-    if (selected.length === 0) {
+    if (step1Selected.length === 0) {
 
       alert(
-        "Please select at least one thing you enjoyed."
+        "Please complete Step 1."
       );
+
+      document
+        .getElementById("step1")
+        .scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      return;
+
+    }
+
+
+    if (step2Selected.length === 0) {
+
+      alert(
+        "Please complete Step 2."
+      );
+
+      document
+        .getElementById("step2")
+        .scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
 
       return;
 
@@ -724,24 +694,20 @@
 
     let reviewParts = [];
 
-
     reviewParts.push(
       randomItem(openings)
     );
 
 
-    selected.forEach(item => {
+    step1Selected.forEach(item => {
 
       const value =
         item.dataset.value;
 
-
       if (phrases[value]) {
 
         reviewParts.push(
-          randomItem(
-            phrases[value]
-          )
+          phrases[value]
         );
 
       }
@@ -749,11 +715,34 @@
     });
 
 
-    if (selected.length <= 4) {
+    step2Selected.forEach(item => {
 
-      reviewParts.push(
-        randomItem(endings)
-      );
+      const value =
+        item.dataset.value;
+
+      if (phrases[value]) {
+
+        reviewParts.push(
+          phrases[value]
+        );
+
+      }
+
+    });
+
+
+    if (step3Selected) {
+
+      const value =
+        step3Selected.dataset.value;
+
+      if (phrases[value]) {
+
+        reviewParts.push(
+          phrases[value]
+        );
+
+      }
 
     }
 
@@ -788,14 +777,10 @@
 
   function copyReview() {
 
-    const reviewBox =
+    const text =
       document.getElementById(
         "reviewText"
-      );
-
-
-    const text =
-      reviewBox.innerText.trim();
+      ).innerText.trim();
 
 
     if (!text) {
@@ -818,14 +803,11 @@
             ".copy-btn"
           );
 
-
         const originalText =
           button.innerText;
 
-
         button.innerText =
           "✓ Copied";
-
 
         setTimeout(() => {
 
@@ -839,7 +821,6 @@
   }
 
 </script>
-
 
 </body>
 </html>
