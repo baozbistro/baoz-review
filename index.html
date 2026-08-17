@@ -34,13 +34,13 @@
 
     .hero {
       position: relative;
-      height: 295px;
+      height: 230px;
 
       background:
         linear-gradient(
           to bottom,
-          rgba(0,0,0,0.02),
-          rgba(0,0,0,0.28)
+          rgba(0,0,0,0.01),
+          rgba(0,0,0,0.18)
         ),
         url("indoor.png") center center / cover no-repeat;
 
@@ -51,16 +51,17 @@
 
     .hero-logo {
       position: absolute;
-      left: 24px;
-      bottom: 24px;
 
-      width: 175px;
-      max-width: 46%;
+      left: 20px;
+      bottom: 18px;
+
+      width: 150px;
+      max-width: 42%;
 
       display: block;
 
       filter: drop-shadow(
-        0 2px 6px rgba(255,255,255,0.25)
+        0 2px 5px rgba(255,255,255,0.18)
       );
     }
 
@@ -70,8 +71,11 @@
 
     .card {
       background: #ffffff;
+
       border-radius: 22px;
+
       padding: 24px 19px;
+
       margin-bottom: 18px;
 
       box-shadow:
@@ -83,8 +87,8 @@
     ========================= */
 
     .intro-card {
-      padding-top: 28px;
-      padding-bottom: 27px;
+      padding-top: 26px;
+      padding-bottom: 25px;
     }
 
     .page-title {
@@ -94,6 +98,7 @@
 
       font-size: 30px;
       line-height: 1.18;
+
       font-weight: 700;
     }
 
@@ -122,6 +127,7 @@
 
       font-size: 11px;
       font-weight: 700;
+
       letter-spacing: 0.7px;
 
       margin-bottom: 11px;
@@ -151,7 +157,10 @@
 
     .option-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 10px;
     }
 
@@ -159,12 +168,15 @@
       min-height: 54px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
       padding: 11px 9px;
 
-      border: 1.5px solid #ddd9ce;
+      border:
+        1.5px solid #ddd9ce;
+
       border-radius: 14px;
 
       background: #faf9f6;
@@ -172,10 +184,12 @@
       color: #45463f;
 
       text-align: center;
+
       font-size: 14px;
       line-height: 1.3;
 
       cursor: pointer;
+
       user-select: none;
 
       transition: 0.2s;
@@ -187,8 +201,11 @@
 
     .option.selected {
       border-color: #616c44;
+
       background: #616c44;
+
       color: white;
+
       font-weight: 700;
     }
 
@@ -198,21 +215,31 @@
 
     .extra-comment {
       width: 100%;
+
       min-height: 125px;
 
       padding: 15px;
 
-      border: 1.5px solid #ddd9ce;
+      border:
+        1.5px solid #ddd9ce;
+
       border-radius: 14px;
 
       background: #faf9f6;
+
       color: #3f403b;
 
-      font-family: Arial, Helvetica, sans-serif;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-size: 15px;
+
       line-height: 1.55;
 
       resize: vertical;
+
       outline: none;
     }
 
@@ -232,15 +259,19 @@
       width: 100%;
 
       border: none;
+
       border-radius: 14px;
 
       margin-top: 18px;
+
       padding: 16px;
 
       background: #616c44;
+
       color: white;
 
       font-size: 16px;
+
       font-weight: 700;
 
       cursor: pointer;
@@ -267,17 +298,21 @@
 
       background: #faf9f6;
 
-      border: 1px solid #e2ded5;
+      border:
+        1px solid #e2ded5;
+
       border-radius: 14px;
 
       color: #42423e;
 
       font-size: 15px;
+
       line-height: 1.7;
 
       margin-bottom: 12px;
 
       white-space: pre-wrap;
+
       outline: none;
     }
 
@@ -285,15 +320,19 @@
       width: 100%;
 
       border: none;
+
       border-radius: 12px;
 
       padding: 14px;
+
       margin-bottom: 10px;
 
       background: #eeeae1;
+
       color: #494942;
 
       font-size: 14px;
+
       font-weight: 700;
 
       cursor: pointer;
@@ -302,15 +341,19 @@
     .regenerate-btn {
       width: 100%;
 
-      border: 1px solid #d2cec3;
+      border:
+        1px solid #d2cec3;
+
       border-radius: 12px;
 
       padding: 13px;
 
       background: transparent;
+
       color: #66665f;
 
       font-size: 14px;
+
       font-weight: 600;
 
       cursor: pointer;
@@ -327,13 +370,17 @@
 
     .platform-buttons {
       display: grid;
+
       grid-template-columns: 1fr;
+
       gap: 11px;
     }
 
     .platform {
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
       gap: 10px;
@@ -345,6 +392,7 @@
       text-decoration: none;
 
       font-size: 16px;
+
       font-weight: 700;
 
       transition: 0.2s;
@@ -355,19 +403,25 @@
     }
 
     .google {
-      border: 1px solid #dedede;
+      border:
+        1px solid #dedede;
+
       background: white;
+
       color: #303030;
     }
 
     .yelp {
       background: #d32323;
+
       color: white;
     }
 
     .google-icon {
       color: #4285f4;
+
       font-size: 21px;
+
       font-weight: 800;
     }
 
@@ -387,12 +441,14 @@
       color: #939187;
 
       font-size: 12px;
+
       line-height: 1.6;
     }
 
-    /* =========================
+    /* ==================================
        MOBILE
-    ========================= */
+       手机端重点修改区域
+    ================================== */
 
     @media (max-width: 430px) {
 
@@ -401,56 +457,66 @@
       }
 
       /*
-        手机上缩小顶部照片。
-        原来是 275px，现在改成 190px。
-      */
+       * 顶部照片缩小
+       * 这里就是控制红框高度的位置
+       */
 
       .hero {
-        height: 190px;
+        height: 150px;
 
-        border-radius: 0 0 22px 22px;
+        border-radius:
+          0 0 20px 20px;
+
+        margin-bottom: 14px;
 
         background:
           linear-gradient(
             to bottom,
-            rgba(0,0,0,0.01),
-            rgba(0,0,0,0.20)
+            rgba(0,0,0,0),
+            rgba(0,0,0,0.12)
           ),
-          url("indoor.png") center 42% / cover no-repeat;
-
-        margin-bottom: 14px;
+          url("indoor.png")
+          center 40% / cover
+          no-repeat;
       }
 
       /*
-        Logo 也跟着缩小，
-        避免照片变小以后 Logo 显得太大。
-      */
+       * Logo 跟着缩小
+       */
 
       .hero-logo {
-        width: 125px;
-        max-width: 42%;
+        width: 105px;
 
-        left: 16px;
-        bottom: 14px;
+        max-width: 34%;
+
+        left: 14px;
+
+        bottom: 10px;
       }
 
       .card {
         padding: 20px 16px;
+
         margin-bottom: 14px;
+
+        border-radius: 20px;
       }
 
       .intro-card {
-        padding-top: 22px;
+        padding-top: 21px;
+
         padding-bottom: 21px;
       }
 
       .page-title {
         font-size: 27px;
+
         margin-bottom: 8px;
       }
 
       .page-subtitle {
         font-size: 14px;
+
         line-height: 1.5;
       }
 
@@ -463,6 +529,7 @@
 <body>
 
 <div class="container">
+
 
   <!-- ======================
        HERO
@@ -752,11 +819,13 @@
   <div class="footer">
 
     Thank you for supporting Bao.Z
+
     <br>
 
     Dumpling & Noodle Bistro
 
   </div>
+
 
 </div>
 
@@ -777,7 +846,9 @@
       "click",
       function() {
 
-        this.classList.toggle("selected");
+        this.classList.toggle(
+          "selected"
+        );
 
       }
     );
@@ -816,6 +887,7 @@
 
     ],
 
+
     service: [
 
       "The staff was friendly and welcoming throughout our visit.",
@@ -825,6 +897,7 @@
       "Everyone who helped us was kind and welcoming."
 
     ],
+
 
     atmosphere: [
 
@@ -836,6 +909,7 @@
 
     ],
 
+
     fresh: [
 
       "Everything tasted fresh and thoughtfully prepared.",
@@ -845,6 +919,7 @@
       "You could really taste the freshness in the dishes."
 
     ],
+
 
     recommend: [
 
@@ -856,6 +931,7 @@
 
     ],
 
+
     dumplings: [
 
       "We especially enjoyed the dumplings — they were juicy, fresh, and cooked nicely.",
@@ -865,6 +941,7 @@
       "The dumplings had a great texture and tasted very fresh."
 
     ],
+
 
     noodles: [
 
@@ -876,6 +953,7 @@
 
     ],
 
+
     buns: [
 
       "The pan-fried buns were one of the highlights of the meal.",
@@ -886,6 +964,7 @@
 
     ],
 
+
     wontons: [
 
       "The wontons were flavorful and very satisfying.",
@@ -895,6 +974,7 @@
       "The wontons were fresh, flavorful, and comforting."
 
     ],
+
 
     drinks: [
 
@@ -910,7 +990,7 @@
 
 
   /* =========================
-     RANDOM ITEM
+     RANDOM
   ========================= */
 
   function randomItem(array) {
@@ -942,7 +1022,7 @@
       );
 
 
-    /* STEP 1 必须选择 */
+    /* STEP 1 REQUIRED */
 
     if (step1Selected.length === 0) {
 
@@ -962,7 +1042,7 @@
     }
 
 
-    /* STEP 2 必须选择 */
+    /* STEP 2 REQUIRED */
 
     if (step2Selected.length === 0) {
 
@@ -985,14 +1065,12 @@
     let reviewParts = [];
 
 
-    /* 开头 */
-
     reviewParts.push(
       randomItem(openings)
     );
 
 
-    /* STEP 1 内容 */
+    /* STEP 1 */
 
     step1Selected.forEach(item => {
 
@@ -1013,7 +1091,7 @@
     });
 
 
-    /* STEP 2 内容 */
+    /* STEP 2 */
 
     step2Selected.forEach(item => {
 
@@ -1034,11 +1112,13 @@
     });
 
 
-    /* STEP 3 客人自己填写 */
+    /* STEP 3 OPTIONAL */
 
     const extraComment =
       document
-        .getElementById("extraComment")
+        .getElementById(
+          "extraComment"
+        )
         .value
         .trim();
 
@@ -1052,32 +1132,35 @@
     }
 
 
-    /* 合成 Review */
-
     const review =
       reviewParts.join(" ");
 
 
-    document.getElementById(
-      "reviewText"
-    ).innerText = review;
+    document
+      .getElementById(
+        "reviewText"
+      )
+      .innerText = review;
 
 
-    document.getElementById(
-      "reviewSection"
-    ).style.display = "block";
+    document
+      .getElementById(
+        "reviewSection"
+      )
+      .style
+      .display = "block";
 
-
-    /* 自动滚到生成的 Review */
 
     setTimeout(() => {
 
-      document.getElementById(
-        "reviewSection"
-      ).scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+      document
+        .getElementById(
+          "reviewSection"
+        )
+        .scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
 
     }, 100);
 
@@ -1092,7 +1175,9 @@
 
     const text =
       document
-        .getElementById("reviewText")
+        .getElementById(
+          "reviewText"
+        )
         .innerText
         .trim();
 
