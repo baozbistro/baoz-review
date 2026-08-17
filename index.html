@@ -396,27 +396,69 @@
 
     @media (max-width: 430px) {
 
-      .hero {
-        height: 275px;
+      .container {
+        width: 94%;
       }
 
+      /*
+        手机上缩小顶部照片。
+        原来是 275px，现在改成 190px。
+      */
+
+      .hero {
+        height: 190px;
+
+        border-radius: 0 0 22px 22px;
+
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.01),
+            rgba(0,0,0,0.20)
+          ),
+          url("indoor.png") center 42% / cover no-repeat;
+
+        margin-bottom: 14px;
+      }
+
+      /*
+        Logo 也跟着缩小，
+        避免照片变小以后 Logo 显得太大。
+      */
+
       .hero-logo {
-        width: 155px;
-        left: 20px;
-        bottom: 20px;
+        width: 125px;
+        max-width: 42%;
+
+        left: 16px;
+        bottom: 14px;
       }
 
       .card {
-        padding: 21px 16px;
+        padding: 20px 16px;
+        margin-bottom: 14px;
+      }
+
+      .intro-card {
+        padding-top: 22px;
+        padding-bottom: 21px;
       }
 
       .page-title {
-        font-size: 28px;
+        font-size: 27px;
+        margin-bottom: 8px;
+      }
+
+      .page-subtitle {
+        font-size: 14px;
+        line-height: 1.5;
       }
 
     }
+
   </style>
 </head>
+
 
 <body>
 
@@ -460,33 +502,55 @@
 
   <section class="card">
 
-    <span class="step">STEP 1</span>
+    <span class="step">
+      STEP 1
+    </span>
 
-    <h2>What stood out to you?</h2>
+    <h2>
+      What stood out to you?
+    </h2>
 
     <p class="instruction">
       Select at least one.
     </p>
 
-    <div class="option-grid" id="step1">
+    <div
+      class="option-grid"
+      id="step1"
+    >
 
-      <div class="option" data-value="taste">
+      <div
+        class="option"
+        data-value="taste"
+      >
         Great Taste
       </div>
 
-      <div class="option" data-value="service">
+      <div
+        class="option"
+        data-value="service"
+      >
         Friendly Service
       </div>
 
-      <div class="option" data-value="atmosphere">
+      <div
+        class="option"
+        data-value="atmosphere"
+      >
         Nice Atmosphere
       </div>
 
-      <div class="option" data-value="fresh">
+      <div
+        class="option"
+        data-value="fresh"
+      >
         Fresh Ingredients
       </div>
 
-      <div class="option" data-value="recommend">
+      <div
+        class="option"
+        data-value="recommend"
+      >
         Recommended by Others
       </div>
 
@@ -501,33 +565,55 @@
 
   <section class="card">
 
-    <span class="step">STEP 2</span>
+    <span class="step">
+      STEP 2
+    </span>
 
-    <h2>What did you enjoy?</h2>
+    <h2>
+      What did you enjoy?
+    </h2>
 
     <p class="instruction">
       Select at least one.
     </p>
 
-    <div class="option-grid" id="step2">
+    <div
+      class="option-grid"
+      id="step2"
+    >
 
-      <div class="option" data-value="dumplings">
+      <div
+        class="option"
+        data-value="dumplings"
+      >
         Dumplings
       </div>
 
-      <div class="option" data-value="noodles">
+      <div
+        class="option"
+        data-value="noodles"
+      >
         Noodles
       </div>
 
-      <div class="option" data-value="buns">
+      <div
+        class="option"
+        data-value="buns"
+      >
         Pan-Fried Buns
       </div>
 
-      <div class="option" data-value="wontons">
+      <div
+        class="option"
+        data-value="wontons"
+      >
         Wontons
       </div>
 
-      <div class="option" data-value="drinks">
+      <div
+        class="option"
+        data-value="drinks"
+      >
         Drinks
       </div>
 
@@ -542,9 +628,13 @@
 
   <section class="card">
 
-    <span class="step">STEP 3</span>
+    <span class="step">
+      STEP 3
+    </span>
 
-    <h2>Anything else you'd like to mention?</h2>
+    <h2>
+      Anything else you'd like to mention?
+    </h2>
 
     <p class="instruction">
       Optional — add something about your experience.
@@ -576,9 +666,13 @@
     id="reviewSection"
   >
 
-    <span class="step">YOUR REVIEW</span>
+    <span class="step">
+      YOUR REVIEW
+    </span>
 
-    <h2>Your review draft</h2>
+    <h2>
+      Your review draft
+    </h2>
 
     <p class="instruction">
       Feel free to edit it so it accurately reflects your own experience.
@@ -657,11 +751,12 @@
 
   <div class="footer">
 
-    Thank you for supporting Bao.Z<br>
+    Thank you for supporting Bao.Z
+    <br>
+
     Dumpling & Noodle Bistro
 
   </div>
-
 
 </div>
 
@@ -712,64 +807,103 @@
   const phrases = {
 
     taste: [
+
       "The food had great flavor and was very satisfying.",
+
       "Everything we tried was flavorful and well prepared.",
+
       "The flavors were balanced and really enjoyable."
+
     ],
 
     service: [
+
       "The staff was friendly and welcoming throughout our visit.",
+
       "Service was warm, friendly, and attentive.",
+
       "Everyone who helped us was kind and welcoming."
+
     ],
 
     atmosphere: [
+
       "The restaurant had a comfortable and inviting atmosphere.",
+
       "The space felt modern, clean, and relaxing.",
+
       "We really liked the warm and comfortable atmosphere."
+
     ],
 
     fresh: [
+
       "Everything tasted fresh and thoughtfully prepared.",
+
       "The ingredients tasted fresh and well prepared.",
+
       "You could really taste the freshness in the dishes."
+
     ],
 
     recommend: [
+
       "We had heard good things about Bao.Z and were happy we gave it a try.",
+
       "Bao.Z had been recommended to us and we really enjoyed the visit.",
+
       "We came after hearing good recommendations and had a great experience."
+
     ],
 
-
     dumplings: [
+
       "We especially enjoyed the dumplings — they were juicy, fresh, and cooked nicely.",
+
       "The dumplings were one of the highlights of the meal.",
+
       "The dumplings had a great texture and tasted very fresh."
+
     ],
 
     noodles: [
+
       "The noodles had a great texture and were full of flavor.",
+
       "We really enjoyed the noodles and the balance of flavors.",
+
       "The noodle dishes were comforting and satisfying."
+
     ],
 
     buns: [
+
       "The pan-fried buns were one of the highlights of the meal.",
+
       "We really enjoyed the pan-fried buns, especially the crispy bottom and juicy filling.",
+
       "The pan-fried buns were flavorful and cooked really well."
+
     ],
 
     wontons: [
+
       "The wontons were flavorful and very satisfying.",
+
       "We really enjoyed the wontons and the seasoning.",
+
       "The wontons were fresh, flavorful, and comforting."
+
     ],
 
     drinks: [
+
       "The drinks were refreshing and paired nicely with the food.",
+
       "We also enjoyed the drinks — refreshing and nicely balanced.",
+
       "The drinks were a great addition to the meal."
+
     ]
 
   };
@@ -808,6 +942,8 @@
       );
 
 
+    /* STEP 1 必须选择 */
+
     if (step1Selected.length === 0) {
 
       alert(
@@ -825,6 +961,8 @@
 
     }
 
+
+    /* STEP 2 必须选择 */
 
     if (step2Selected.length === 0) {
 
@@ -847,10 +985,14 @@
     let reviewParts = [];
 
 
+    /* 开头 */
+
     reviewParts.push(
       randomItem(openings)
     );
 
+
+    /* STEP 1 内容 */
 
     step1Selected.forEach(item => {
 
@@ -871,6 +1013,8 @@
     });
 
 
+    /* STEP 2 内容 */
+
     step2Selected.forEach(item => {
 
       const value =
@@ -890,6 +1034,8 @@
     });
 
 
+    /* STEP 3 客人自己填写 */
+
     const extraComment =
       document
         .getElementById("extraComment")
@@ -906,6 +1052,8 @@
     }
 
 
+    /* 合成 Review */
+
     const review =
       reviewParts.join(" ");
 
@@ -919,6 +1067,8 @@
       "reviewSection"
     ).style.display = "block";
 
+
+    /* 自动滚到生成的 Review */
 
     setTimeout(() => {
 
