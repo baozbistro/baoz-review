@@ -1,828 +1,1435 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Bao.Z | Share Your Experience</title>
 
+
   <style>
+
     * {
       box-sizing: border-box;
     }
+
 
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
+
       margin: 0;
+
       background: #f4f0e8;
-      color: #2f3029;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .container {
-      width: min(94%, 560px);
-      margin: 0 auto;
-      padding-bottom: 50px;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      position: relative;
-      height: 230px;
-
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.01),
-          rgba(0,0,0,0.18)
-        ),
-        url("indoor.png") center center / cover no-repeat;
-
-      border-radius: 0 0 28px 28px;
-      overflow: hidden;
-      margin-bottom: 18px;
-    }
-
-    .hero-logo {
-      position: absolute;
-
-      left: 20px;
-      bottom: 18px;
-
-      width: 150px;
-      max-width: 42%;
-
-      display: block;
-
-      filter: drop-shadow(
-        0 2px 5px rgba(255,255,255,0.18)
-      );
-    }
-
-    /* =========================
-       CARD
-    ========================= */
-
-    .card {
-      background: #ffffff;
-
-      border-radius: 22px;
-
-      padding: 24px 19px;
-
-      margin-bottom: 18px;
-
-      box-shadow:
-        0 6px 22px rgba(40,35,25,0.07);
-    }
-
-    /* =========================
-       INTRO
-    ========================= */
-
-    .intro-card {
-      padding-top: 26px;
-      padding-bottom: 25px;
-    }
-
-    .page-title {
-      margin: 0 0 10px;
 
       color: #2f3029;
-
-      font-size: 30px;
-      line-height: 1.18;
-
-      font-weight: 700;
-    }
-
-    .page-subtitle {
-      margin: 0;
-
-      color: #73736c;
-
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    /* =========================
-       STEP
-    ========================= */
-
-    .step {
-      display: inline-block;
-
-      padding: 6px 11px;
-
-      background: #616c44;
-      color: white;
-
-      border-radius: 30px;
-
-      font-size: 11px;
-      font-weight: 700;
-
-      letter-spacing: 0.7px;
-
-      margin-bottom: 11px;
-    }
-
-    h2 {
-      margin: 0 0 7px;
-
-      color: #33362b;
-
-      font-size: 21px;
-      line-height: 1.3;
-    }
-
-    .instruction {
-      margin: 0 0 18px;
-
-      color: #77776f;
-
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    /* =========================
-       OPTIONS
-    ========================= */
-
-    .option-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
-      gap: 10px;
-    }
-
-    .option {
-      min-height: 54px;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      padding: 11px 9px;
-
-      border:
-        1.5px solid #ddd9ce;
-
-      border-radius: 14px;
-
-      background: #faf9f6;
-
-      color: #45463f;
-
-      text-align: center;
-
-      font-size: 14px;
-      line-height: 1.3;
-
-      cursor: pointer;
-
-      user-select: none;
-
-      transition: 0.2s;
-    }
-
-    .option:hover {
-      border-color: #616c44;
-    }
-
-    .option.selected {
-      border-color: #616c44;
-
-      background: #616c44;
-
-      color: white;
-
-      font-weight: 700;
-    }
-
-    /* =========================
-       TEXTAREA
-    ========================= */
-
-    .extra-comment {
-      width: 100%;
-
-      min-height: 125px;
-
-      padding: 15px;
-
-      border:
-        1.5px solid #ddd9ce;
-
-      border-radius: 14px;
-
-      background: #faf9f6;
-
-      color: #3f403b;
 
       font-family:
         Arial,
         Helvetica,
         sans-serif;
 
+    }
+
+
+    .container {
+
+      width: min(94%, 560px);
+
+      margin: 0 auto;
+
+      padding-bottom: 50px;
+
+    }
+
+
+
+    /* ========================================
+       HERO
+    ======================================== */
+
+
+    .hero {
+
+      position: relative;
+
+      height: 230px;
+
+
+      background:
+
+        linear-gradient(
+
+          to bottom,
+
+          rgba(0,0,0,0.01),
+
+          rgba(0,0,0,0.18)
+
+        ),
+
+        url("indoor.png")
+        center center / cover
+        no-repeat;
+
+
+      border-radius:
+        0 0 28px 28px;
+
+
+      overflow: hidden;
+
+
+      margin-bottom: 18px;
+
+    }
+
+
+
+    .hero-logo {
+
+      position: absolute;
+
+
+      left: 20px;
+
+      bottom: 18px;
+
+
+      width: 150px;
+
+      max-width: 42%;
+
+
+      display: block;
+
+
+      filter:
+
+        drop-shadow(
+
+          0 2px 5px
+
+          rgba(255,255,255,0.18)
+
+        );
+
+    }
+
+
+
+    /* ========================================
+       CARDS
+    ======================================== */
+
+
+    .card {
+
+      background: #ffffff;
+
+
+      border-radius: 22px;
+
+
+      padding:
+
+        24px 19px;
+
+
+      margin-bottom: 18px;
+
+
+      box-shadow:
+
+        0 6px 22px
+
+        rgba(40,35,25,0.07);
+
+    }
+
+
+
+    /* ========================================
+       INTRO
+    ======================================== */
+
+
+    .intro-card {
+
+      padding-top: 26px;
+
+      padding-bottom: 25px;
+
+    }
+
+
+
+    .page-title {
+
+      margin:
+
+        0 0 10px;
+
+
+      color: #2f3029;
+
+
+      font-size: 30px;
+
+      line-height: 1.18;
+
+      font-weight: 700;
+
+    }
+
+
+
+    .page-subtitle {
+
+      margin: 0;
+
+
+      color: #73736c;
+
+
       font-size: 15px;
 
-      line-height: 1.55;
+      line-height: 1.6;
 
-      resize: vertical;
-
-      outline: none;
     }
 
-    .extra-comment:focus {
-      border-color: #616c44;
-    }
 
-    .extra-comment::placeholder {
-      color: #aaa79f;
-    }
 
-    /* =========================
-       GENERATE BUTTON
-    ========================= */
+    /* ========================================
+       STEP LABEL
+    ======================================== */
 
-    .generate-btn {
-      width: 100%;
 
-      border: none;
+    .step {
 
-      border-radius: 14px;
+      display: inline-block;
 
-      margin-top: 18px;
 
-      padding: 16px;
+      padding:
+
+        6px 11px;
+
 
       background: #616c44;
 
       color: white;
 
-      font-size: 16px;
+
+      border-radius: 30px;
+
+
+      font-size: 11px;
 
       font-weight: 700;
 
-      cursor: pointer;
 
-      transition: 0.2s;
+      letter-spacing: 0.7px;
+
+
+      margin-bottom: 11px;
+
     }
 
-    .generate-btn:hover {
-      opacity: 0.92;
+
+
+    h2 {
+
+      margin:
+
+        0 0 7px;
+
+
+      color: #33362b;
+
+
+      font-size: 21px;
+
+      line-height: 1.3;
+
     }
 
-    /* =========================
-       REVIEW
-    ========================= */
 
-    #reviewSection {
-      display: none;
-    }
 
-    .review-box {
-      min-height: 145px;
+    .instruction {
 
-      padding: 16px;
+      margin:
 
-      background: #faf9f6;
+        0 0 18px;
 
-      border:
-        1px solid #e2ded5;
 
-      border-radius: 14px;
+      color: #77776f;
 
-      color: #42423e;
-
-      font-size: 15px;
-
-      line-height: 1.7;
-
-      margin-bottom: 12px;
-
-      white-space: pre-wrap;
-
-      outline: none;
-    }
-
-    .copy-btn {
-      width: 100%;
-
-      border: none;
-
-      border-radius: 12px;
-
-      padding: 14px;
-
-      margin-bottom: 10px;
-
-      background: #eeeae1;
-
-      color: #494942;
 
       font-size: 14px;
 
-      font-weight: 700;
+      line-height: 1.55;
 
-      cursor: pointer;
     }
 
-    .regenerate-btn {
-      width: 100%;
 
-      border:
-        1px solid #d2cec3;
 
-      border-radius: 12px;
+    /* ========================================
+       OPTIONS
+    ======================================== */
 
-      padding: 13px;
 
-      background: transparent;
+    .option-grid {
 
-      color: #66665f;
-
-      font-size: 14px;
-
-      font-weight: 600;
-
-      cursor: pointer;
-    }
-
-    /* =========================
-       PLATFORM
-    ========================= */
-
-    .platform-card {
-      padding-top: 18px;
-      padding-bottom: 18px;
-    }
-
-    .platform-buttons {
       display: grid;
 
-      grid-template-columns: 1fr;
 
-      gap: 11px;
+      grid-template-columns:
+
+        repeat(2, 1fr);
+
+
+      gap: 10px;
+
     }
 
-    .platform {
+
+
+    .option {
+
+      min-height: 54px;
+
+
       display: flex;
+
 
       align-items: center;
 
       justify-content: center;
 
-      gap: 10px;
 
-      padding: 16px;
+      padding:
+
+        11px 9px;
+
+
+      border:
+
+        1.5px solid
+
+        #ddd9ce;
+
 
       border-radius: 14px;
 
-      text-decoration: none;
 
-      font-size: 16px;
+      background: #faf9f6;
 
-      font-weight: 700;
 
-      transition: 0.2s;
-    }
+      color: #45463f;
 
-    .platform:hover {
-      transform: translateY(-1px);
-    }
-
-    .google {
-      border:
-        1px solid #dedede;
-
-      background: white;
-
-      color: #303030;
-    }
-
-    .yelp {
-      background: #d32323;
-
-      color: white;
-    }
-
-    .google-icon {
-      color: #4285f4;
-
-      font-size: 21px;
-
-      font-weight: 800;
-    }
-
-    .yelp-icon {
-      font-size: 21px;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    .footer {
-      padding: 12px 20px 0;
 
       text-align: center;
 
+
+      font-size: 14px;
+
+      line-height: 1.3;
+
+
+      cursor: pointer;
+
+
+      user-select: none;
+
+
+      transition: 0.2s;
+
+    }
+
+
+
+    .option:hover {
+
+      border-color: #616c44;
+
+    }
+
+
+
+    .option.selected {
+
+      border-color: #616c44;
+
+
+      background: #616c44;
+
+
+      color: white;
+
+
+      font-weight: 700;
+
+    }
+
+
+
+    /* ========================================
+       TEXTAREA
+    ======================================== */
+
+
+    .extra-comment {
+
+      width: 100%;
+
+
+      min-height: 125px;
+
+
+      padding: 15px;
+
+
+      border:
+
+        1.5px solid
+
+        #ddd9ce;
+
+
+      border-radius: 14px;
+
+
+      background: #faf9f6;
+
+
+      color: #3f403b;
+
+
+      font-family:
+
+        Arial,
+
+        Helvetica,
+
+        sans-serif;
+
+
+      font-size: 15px;
+
+
+      line-height: 1.55;
+
+
+      resize: vertical;
+
+
+      outline: none;
+
+    }
+
+
+
+    .extra-comment:focus {
+
+      border-color: #616c44;
+
+    }
+
+
+
+    .extra-comment::placeholder {
+
+      color: #aaa79f;
+
+    }
+
+
+
+    /* ========================================
+       CREATE REVIEW BUTTON
+    ======================================== */
+
+
+    .generate-btn {
+
+      width: 100%;
+
+
+      border: none;
+
+
+      border-radius: 14px;
+
+
+      margin-top: 18px;
+
+
+      padding: 16px;
+
+
+      background: #616c44;
+
+
+      color: white;
+
+
+      font-size: 16px;
+
+
+      font-weight: 700;
+
+
+      cursor: pointer;
+
+
+      transition: 0.2s;
+
+    }
+
+
+
+    .generate-btn:hover {
+
+      opacity: 0.92;
+
+    }
+
+
+
+    /* ========================================
+       REVIEW
+    ======================================== */
+
+
+    #reviewSection {
+
+      display: none;
+
+    }
+
+
+
+    .review-box {
+
+      min-height: 145px;
+
+
+      padding: 16px;
+
+
+      background: #faf9f6;
+
+
+      border:
+
+        1px solid
+
+        #e2ded5;
+
+
+      border-radius: 14px;
+
+
+      color: #42423e;
+
+
+      font-size: 15px;
+
+
+      line-height: 1.7;
+
+
+      margin-bottom: 12px;
+
+
+      white-space: pre-wrap;
+
+
+      outline: none;
+
+    }
+
+
+
+    .copy-btn {
+
+      width: 100%;
+
+
+      border: none;
+
+
+      border-radius: 12px;
+
+
+      padding: 14px;
+
+
+      margin-bottom: 10px;
+
+
+      background: #eeeae1;
+
+
+      color: #494942;
+
+
+      font-size: 14px;
+
+
+      font-weight: 700;
+
+
+      cursor: pointer;
+
+    }
+
+
+
+    .regenerate-btn {
+
+      width: 100%;
+
+
+      border:
+
+        1px solid
+
+        #d2cec3;
+
+
+      border-radius: 12px;
+
+
+      padding: 13px;
+
+
+      background: transparent;
+
+
+      color: #66665f;
+
+
+      font-size: 14px;
+
+
+      font-weight: 600;
+
+
+      cursor: pointer;
+
+    }
+
+
+
+    /* ========================================
+       GOOGLE / YELP
+    ======================================== */
+
+
+    .platform-card {
+
+      padding-top: 18px;
+
+      padding-bottom: 18px;
+
+    }
+
+
+
+    .platform-buttons {
+
+      display: grid;
+
+
+      grid-template-columns: 1fr;
+
+
+      gap: 11px;
+
+    }
+
+
+
+    .platform {
+
+      display: flex;
+
+
+      align-items: center;
+
+      justify-content: center;
+
+
+      gap: 10px;
+
+
+      padding: 16px;
+
+
+      border-radius: 14px;
+
+
+      text-decoration: none;
+
+
+      font-size: 16px;
+
+
+      font-weight: 700;
+
+
+      transition: 0.2s;
+
+    }
+
+
+
+    .platform:hover {
+
+      transform:
+
+        translateY(-1px);
+
+    }
+
+
+
+    .google {
+
+      border:
+
+        1px solid
+
+        #dedede;
+
+
+      background: white;
+
+
+      color: #303030;
+
+    }
+
+
+
+    .yelp {
+
+      background: #d32323;
+
+
+      color: white;
+
+    }
+
+
+
+    .google-icon {
+
+      color: #4285f4;
+
+
+      font-size: 21px;
+
+
+      font-weight: 800;
+
+    }
+
+
+
+    .yelp-icon {
+
+      font-size: 21px;
+
+    }
+
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+
+    .footer {
+
+      padding:
+
+        12px 20px 0;
+
+
+      text-align: center;
+
+
       color: #939187;
+
 
       font-size: 12px;
 
+
       line-height: 1.6;
+
     }
 
-    /* ==================================
+
+
+    /* ========================================
        MOBILE
-       手机端重点修改区域
-    ================================== */
+    ======================================== */
+
 
     @media (max-width: 430px) {
 
+
       .container {
+
         width: 94%;
+
       }
 
+
+
       /*
-       * 顶部照片缩小
-       * 这里就是控制红框高度的位置
-       */
+        手机顶部照片
+        红框区域大小
+      */
+
 
       .hero {
+
         height: 150px;
 
+
         border-radius:
+
           0 0 20px 20px;
+
 
         margin-bottom: 14px;
 
+
         background:
+
           linear-gradient(
+
             to bottom,
+
             rgba(0,0,0,0),
+
             rgba(0,0,0,0.12)
+
           ),
+
           url("indoor.png")
+
           center 40% / cover
+
           no-repeat;
+
       }
 
+
+
       /*
-       * Logo 跟着缩小
-       */
+        手机 Logo
+      */
+
 
       .hero-logo {
+
         width: 105px;
+
 
         max-width: 34%;
 
+
         left: 14px;
 
+
         bottom: 10px;
+
       }
 
+
+
       .card {
-        padding: 20px 16px;
+
+        padding:
+
+          20px 16px;
+
 
         margin-bottom: 14px;
 
+
         border-radius: 20px;
+
       }
+
+
 
       .intro-card {
+
         padding-top: 21px;
 
+
         padding-bottom: 21px;
+
       }
+
+
 
       .page-title {
+
         font-size: 27px;
 
+
         margin-bottom: 8px;
+
       }
+
+
 
       .page-subtitle {
+
         font-size: 14px;
 
+
         line-height: 1.5;
+
       }
+
 
     }
 
+
   </style>
+
 </head>
+
 
 
 <body>
 
+
 <div class="container">
 
 
-  <!-- ======================
+  <!-- ========================================
        HERO
-  ======================= -->
+  ========================================= -->
+
 
   <section class="hero">
 
+
     <img
+
       class="hero-logo"
+
       src="baoz-logo.png"
+
       alt="Bao.Z Dumpling & Noodle Bistro"
+
     >
+
 
   </section>
 
 
-  <!-- ======================
+
+  <!-- ========================================
        INTRO
-  ======================= -->
+  ========================================= -->
+
 
   <section class="card intro-card">
 
+
     <h1 class="page-title">
+
       How was your visit?
+
     </h1>
 
+
     <p class="page-subtitle">
+
       Choose the highlights that reflect your visit and we'll help you put them into words.
+
     </p>
+
 
   </section>
 
 
-  <!-- ======================
+
+  <!-- ========================================
        STEP 1
-  ======================= -->
+  ========================================= -->
+
 
   <section class="card">
 
+
     <span class="step">
+
       STEP 1
+
     </span>
 
+
     <h2>
+
       What stood out to you?
+
     </h2>
 
+
     <p class="instruction">
+
       Select at least one.
+
     </p>
 
+
+
     <div
+
       class="option-grid"
+
       id="step1"
+
     >
 
+
       <div
+
         class="option"
+
         data-value="taste"
+
       >
+
         Great Taste
+
       </div>
 
+
+
       <div
+
         class="option"
+
         data-value="service"
+
       >
+
         Friendly Service
+
       </div>
 
+
+
       <div
+
         class="option"
+
         data-value="atmosphere"
+
       >
+
         Nice Atmosphere
+
       </div>
 
+
+
       <div
+
         class="option"
+
         data-value="fresh"
+
       >
+
         Fresh Ingredients
+
       </div>
 
+
+
       <div
+
         class="option"
+
         data-value="value"
+
       >
+
         Good Value
+
       </div>
+
 
     </div>
+
 
   </section>
 
 
-  <!-- ======================
+
+  <!-- ========================================
        STEP 2
-  ======================= -->
+  ========================================= -->
+
 
   <section class="card">
 
+
     <span class="step">
+
       STEP 2
+
     </span>
 
+
     <h2>
+
       What did you enjoy?
+
     </h2>
 
+
     <p class="instruction">
+
       Select at least one.
+
     </p>
+
+
 
     <div
+
       class="option-grid"
+
       id="step2"
+
     >
 
+
       <div
+
         class="option"
+
         data-value="dumplings"
+
       >
+
         Dumplings
+
       </div>
 
+
+
       <div
+
         class="option"
+
         data-value="noodles"
+
       >
+
         Noodles
+
       </div>
 
+
+
       <div
+
         class="option"
+
         data-value="buns"
+
       >
+
         Pan-Fried Buns
+
       </div>
 
+
+
       <div
+
         class="option"
+
         data-value="wontons"
+
       >
+
         Wontons
+
       </div>
 
+
+
       <div
+
         class="option"
+
         data-value="drinks"
+
       >
+
         Drinks
+
       </div>
+
 
     </div>
+
 
   </section>
 
 
-  <!-- ======================
+
+  <!-- ========================================
        STEP 3
-  ======================= -->
+  ========================================= -->
+
 
   <section class="card">
 
+
     <span class="step">
+
       STEP 3
+
     </span>
 
+
     <h2>
+
       Anything else you'd like to mention?
+
     </h2>
 
+
     <p class="instruction">
+
       Optional — add something about your experience.
+
     </p>
+
+
 
     <textarea
+
       id="extraComment"
+
       class="extra-comment"
+
       placeholder="Optional — add something about your experience"
+
       maxlength="220"
+
     ></textarea>
 
+
+
     <button
+
       class="generate-btn"
+
       onclick="generateReview()"
+
     >
+
       Create My Review →
+
     </button>
+
 
   </section>
 
 
-  <!-- ======================
+
+  <!-- ========================================
        REVIEW
-  ======================= -->
+  ========================================= -->
+
 
   <section
+
     class="card"
+
     id="reviewSection"
+
   >
 
+
     <span class="step">
+
       YOUR REVIEW
+
     </span>
 
+
     <h2>
+
       Your review draft
+
     </h2>
 
+
     <p class="instruction">
+
       Feel free to edit it so it accurately reflects your own experience.
+
     </p>
 
+
+
     <div
+
       class="review-box"
+
       id="reviewText"
+
       contenteditable="true"
+
     ></div>
 
-    <button
-      class="copy-btn"
-      onclick="copyReview()"
-    >
-      Copy Review
-    </button>
+
 
     <button
-      class="regenerate-btn"
-      onclick="generateReview()"
+
+      class="copy-btn"
+
+      onclick="copyReview()"
+
     >
-      Try Another Version
+
+      Copy Review
+
     </button>
+
+
+
+    <button
+
+      class="regenerate-btn"
+
+      onclick="generateReview()"
+
+    >
+
+      Try Another Version
+
+    </button>
+
 
   </section>
 
 
-  <!-- ======================
+
+  <!-- ========================================
        GOOGLE / YELP
-  ======================= -->
+  ========================================= -->
+
 
   <section class="card platform-card">
 
+
     <div class="platform-buttons">
 
+
       <a
+
         class="platform google"
+
         href="https://g.page/r/CcANFRLXhddQEBM/review"
+
         target="_blank"
+
         rel="noopener noreferrer"
+
       >
 
+
         <span class="google-icon">
+
           G
+
         </span>
+
 
         Continue to Google →
 
+
       </a>
+
 
 
       <a
+
         class="platform yelp"
+
         href="https://www.yelp.com/writeareview/biz/PPe65pIbwNnrsuTi3n2eEQ?return_url=%2Fbiz%2FPPe65pIbwNnrsuTi3n2eEQ&review_origin=biz-details-war-button"
+
         target="_blank"
+
         rel="noopener noreferrer"
+
       >
 
+
         <span class="yelp-icon">
+
           ★
+
         </span>
+
 
         Visit us on Yelp →
 
+
       </a>
 
+
     </div>
+
 
   </section>
 
 
-  <!-- ======================
+
+  <!-- ========================================
        FOOTER
-  ======================= -->
+  ========================================= -->
+
 
   <div class="footer">
 
+
     Thank you for supporting Bao.Z
+
 
     <br>
 
+
     Dumpling & Noodle Bistro
+
 
   </div>
 
@@ -830,399 +1437,1074 @@
 </div>
 
 
+
 <script>
 
-  /* =========================
+
+  /* ========================================
      SELECT OPTIONS
-  ========================= */
+  ======================================== */
+
 
   const allOptions =
-    document.querySelectorAll(".option");
 
+    document.querySelectorAll(
 
-  allOptions.forEach(option => {
+      ".option"
 
-    option.addEventListener(
-      "click",
-      function() {
-
-        this.classList.toggle(
-          "selected"
-        );
-
-      }
     );
 
-  });
 
 
-  /* =========================
-     REVIEW PHRASES
-  ========================= */
+  allOptions.forEach(
+
+    option => {
+
+
+      option.addEventListener(
+
+        "click",
+
+        function() {
+
+
+          this.classList.toggle(
+
+            "selected"
+
+          );
+
+
+        }
+
+      );
+
+
+    }
+
+  );
+
+
+
+  /* ========================================
+     OPENINGS
+  ======================================== */
+
 
   const openings = [
 
+
     "We had a really nice experience at Bao.Z.",
+
 
     "Really enjoyed our visit to Bao.Z.",
 
+
     "We had a great meal at Bao.Z.",
+
 
     "Bao.Z was a great spot for a casual meal.",
 
-    "We stopped by Bao.Z and had a very enjoyable experience."
+
+    "We stopped by Bao.Z and had a very enjoyable experience.",
+
+
+    "We really enjoyed our meal at Bao.Z and had a great experience overall.",
+
+
+    "This was our first time trying Bao.Z and we really enjoyed it.",
+
+
+    "We had such an enjoyable meal at Bao.Z.",
+
+
+    "Had a really good experience at Bao.Z from start to finish.",
+
+
+    "We came to Bao.Z for a casual meal and ended up really enjoying everything.",
+
+
+    "Bao.Z was a nice find and we had a very enjoyable meal.",
+
+
+    "We had a great experience here and really enjoyed the food.",
+
+
+    "Really happy we decided to try Bao.Z.",
+
+
+    "We had a very pleasant visit and enjoyed our meal at Bao.Z.",
+
+
+    "Our meal at Bao.Z was enjoyable from start to finish."
+
 
   ];
 
 
+
+  /* ========================================
+     REVIEW PHRASES
+  ======================================== */
+
+
   const phrases = {
+
+
+
+    /* ========================================
+       GREAT TASTE
+    ======================================== */
+
 
     taste: [
 
-      "The food had great flavor and was very satisfying.",
 
-      "Everything we tried was flavorful and well prepared.",
+      "The food was flavorful and really enjoyable.",
 
-      "The flavors were balanced and really enjoyable."
+
+      "Everything we tried was well seasoned and tasted great.",
+
+
+      "We really enjoyed the flavors throughout the meal.",
+
+
+      "The food was delicious and nicely prepared.",
+
+
+      "Everything had a great balance of flavor.",
+
+
+      "The dishes we ordered were tasty and very satisfying.",
+
+
+      "We were really impressed with how flavorful everything was.",
+
+
+      "The food was full of flavor without being overwhelming.",
+
+
+      "Everything we ordered tasted great and was cooked nicely.",
+
+
+      "The flavors were one of the highlights of our meal.",
+
+
+      "We enjoyed every dish we tried and thought the food was very well prepared.",
+
+
+      "The food had a lot of flavor and made for a really satisfying meal."
+
 
     ],
+
+
+
+    /* ========================================
+       FRIENDLY SERVICE
+    ======================================== */
 
 
     service: [
 
+
       "The staff was friendly and welcoming throughout our visit.",
 
-      "Service was warm, friendly, and attentive.",
 
-      "Everyone who helped us was kind and welcoming."
+      "Everyone who helped us was kind and attentive.",
+
+
+      "The service was warm, friendly, and efficient.",
+
+
+      "We felt very welcomed from the moment we arrived.",
+
+
+      "The staff was helpful and made the experience even better.",
+
+
+      "Service was attentive without feeling rushed.",
+
+
+      "Everyone was friendly and made us feel comfortable.",
+
+
+      "The team was welcoming and took good care of us.",
+
+
+      "We really appreciated the friendly and attentive service.",
+
+
+      "The staff made the whole dining experience feel easy and enjoyable.",
+
+
+      "Service was quick, helpful, and very pleasant.",
+
+
+      "The people working there were genuinely friendly and welcoming."
+
 
     ],
+
+
+
+    /* ========================================
+       NICE ATMOSPHERE
+    ======================================== */
 
 
     atmosphere: [
 
-      "The restaurant had a comfortable and inviting atmosphere.",
 
-      "The space felt modern, clean, and relaxing.",
+      "The restaurant had a warm and inviting atmosphere.",
 
-      "We really liked the warm and comfortable atmosphere."
+
+      "We really liked the comfortable and relaxed dining environment.",
+
+
+      "The space felt modern, clean, and welcoming.",
+
+
+      "The atmosphere made the meal even more enjoyable.",
+
+
+      "We loved the warm and comfortable feel of the restaurant.",
+
+
+      "The dining area was nicely designed and had a relaxing feel.",
+
+
+      "The restaurant had a pleasant atmosphere that made us want to stay and enjoy the meal.",
+
+
+      "The space was comfortable and had a really nice overall vibe.",
+
+
+      "We enjoyed the cozy and welcoming atmosphere.",
+
+
+      "The restaurant felt clean, modern, and thoughtfully designed.",
+
+
+      "The interior had a warm feel that worked really well for a casual meal.",
+
+
+      "The atmosphere was relaxed and made the whole experience very comfortable."
+
 
     ],
+
+
+
+    /* ========================================
+       FRESH INGREDIENTS
+    ======================================== */
 
 
     fresh: [
 
+
       "Everything tasted fresh and thoughtfully prepared.",
+
 
       "The ingredients tasted fresh and well prepared.",
 
-      "You could really taste the freshness in the dishes."
+
+      "You could really taste the freshness in the dishes.",
+
+
+      "The food tasted fresh from the first bite.",
+
+
+      "Everything we ordered tasted freshly made.",
+
+
+      "The ingredients tasted fresh and the dishes were prepared nicely.",
+
+
+      "We really appreciated how fresh everything tasted.",
+
+
+      "The freshness of the ingredients really came through in the food.",
+
+
+      "The dishes tasted fresh, clean, and well balanced.",
+
+
+      "Everything felt freshly prepared rather than sitting around.",
+
+
+      "The food had a fresh quality that made the flavors stand out.",
+
+
+      "We were impressed by how fresh and well prepared everything tasted."
+
 
     ],
+
+
+
+    /* ========================================
+       GOOD VALUE
+    ======================================== */
 
 
     value: [
 
+
       "We thought the quality and portions were a good value.",
+
 
       "The food felt well worth the price and was very satisfying.",
 
-      "We were happy with the quality, portions, and overall value."
+
+      "We were happy with the quality, portions, and overall value.",
+
+
+      "The portions and quality felt very reasonable for the price.",
+
+
+      "We felt like we got a really satisfying meal for the price.",
+
+
+      "The overall experience felt like a good value.",
+
+
+      "The quality of the food made the meal feel well worth it.",
+
+
+      "We were pleased with both the portion sizes and the quality.",
+
+
+      "The meal felt fairly priced for what we received.",
+
+
+      "The portions were satisfying and the overall value was great.",
+
+
+      "For the quality and amount of food, we thought the pricing was reasonable.",
+
+
+      "We left feeling satisfied with both the meal and the value."
+
 
     ],
+
+
+
+    /* ========================================
+       DUMPLINGS
+    ======================================== */
 
 
     dumplings: [
 
-      "We especially enjoyed the dumplings — they were juicy, fresh, and cooked nicely.",
 
-      "The dumplings were one of the highlights of the meal.",
+      "The dumplings were one of the highlights of our meal.",
 
-      "The dumplings had a great texture and tasted very fresh."
+
+      "We especially enjoyed the dumplings — they were juicy and flavorful.",
+
+
+      "The dumplings had a great texture and tasted freshly made.",
+
+
+      "We really liked the dumplings and would definitely order them again.",
+
+
+      "The dumplings were tender, flavorful, and very satisfying.",
+
+
+      "The filling in the dumplings was juicy and nicely seasoned.",
+
+
+      "We loved the texture of the dumpling wrappers and the flavorful filling.",
+
+
+      "The dumplings tasted fresh and were cooked really nicely.",
+
+
+      "The dumplings were delicious and disappeared from the table quickly.",
+
+
+      "We especially liked how juicy and flavorful the dumplings were.",
+
+
+      "The dumplings were comforting, flavorful, and one of our favorite dishes.",
+
+
+      "The dumplings alone would be a good reason for us to come back."
+
 
     ],
+
+
+
+    /* ========================================
+       NOODLES
+    ======================================== */
 
 
     noodles: [
 
+
       "The noodles had a great texture and were full of flavor.",
+
 
       "We really enjoyed the noodles and the balance of flavors.",
 
-      "The noodle dishes were comforting and satisfying."
+
+      "The noodle dishes were comforting and satisfying.",
+
+
+      "The noodles were cooked nicely and had a really enjoyable texture.",
+
+
+      "We loved the flavor and texture of the noodles.",
+
+
+      "The noodles were flavorful without feeling too heavy.",
+
+
+      "The noodle dish was simple, comforting, and really satisfying.",
+
+
+      "The noodles had just the right texture and paired well with the sauce.",
+
+
+      "We especially enjoyed how well the noodles picked up all the flavors.",
+
+
+      "The noodles were one of our favorite parts of the meal.",
+
+
+      "The noodle dish was flavorful and something we would happily order again.",
+
+
+      "We really liked the texture of the noodles and how everything came together."
+
 
     ],
+
+
+
+    /* ========================================
+       PAN-FRIED BUNS
+    ======================================== */
 
 
     buns: [
 
+
       "The pan-fried buns were one of the highlights of the meal.",
 
-      "We really enjoyed the pan-fried buns, especially the crispy bottom and juicy filling.",
 
-      "The pan-fried buns were flavorful and cooked really well."
+      "We really enjoyed the crispy bottom and juicy filling of the pan-fried buns.",
+
+
+      "The pan-fried buns were flavorful and cooked really well.",
+
+
+      "The buns had a great contrast between the crispy bottom and soft top.",
+
+
+      "We loved how crispy the bottoms of the buns were.",
+
+
+      "The pan-fried buns were juicy inside with a nicely crisp exterior.",
+
+
+      "The texture of the pan-fried buns was excellent.",
+
+
+      "The buns were crispy, juicy, and very satisfying.",
+
+
+      "We would definitely order the pan-fried buns again.",
+
+
+      "The pan-fried buns came out nicely cooked and full of flavor.",
+
+
+      "The crispy bottom made the pan-fried buns especially enjoyable.",
+
+
+      "The pan-fried buns were probably one of our favorite things on the table."
+
 
     ],
+
+
+
+    /* ========================================
+       WONTONS
+    ======================================== */
 
 
     wontons: [
 
+
       "The wontons were flavorful and very satisfying.",
+
 
       "We really enjoyed the wontons and the seasoning.",
 
-      "The wontons were fresh, flavorful, and comforting."
+
+      "The wontons were fresh, flavorful, and comforting.",
+
+
+      "The wontons had a nice texture and plenty of flavor.",
+
+
+      "We especially liked how flavorful the wonton filling was.",
+
+
+      "The wontons were nicely seasoned and very enjoyable.",
+
+
+      "The wontons were comforting and tasted freshly prepared.",
+
+
+      "We really enjoyed the balance of flavors in the wontons.",
+
+
+      "The wontons were tender and packed with flavor.",
+
+
+      "The wonton dish was one of the things we enjoyed most.",
+
+
+      "The wontons had a great texture and were very satisfying.",
+
+
+      "We would happily order the wontons again next time."
+
 
     ],
 
 
+
+    /* ========================================
+       DRINKS
+    ======================================== */
+
+
     drinks: [
+
 
       "The drinks were refreshing and paired nicely with the food.",
 
-      "We also enjoyed the drinks — refreshing and nicely balanced.",
 
-      "The drinks were a great addition to the meal."
+      "We also enjoyed the drinks — they were refreshing and nicely balanced.",
+
+
+      "The drinks were a great addition to the meal.",
+
+
+      "Our drinks were refreshing and not overly sweet.",
+
+
+      "We really liked the drinks and thought they paired well with the food.",
+
+
+      "The drinks were light, refreshing, and enjoyable.",
+
+
+      "We were pleasantly surprised by how much we liked the drinks.",
+
+
+      "The drinks were refreshing and rounded out the meal nicely.",
+
+
+      "We enjoyed having something refreshing alongside the dumplings and noodles.",
+
+
+      "The drinks had a nice balance of flavor and sweetness.",
+
+
+      "The drink selection was a nice complement to the food.",
+
+
+      "We would definitely get the drinks again on our next visit."
+
 
     ]
+
 
   };
 
 
-  /* =========================
-     RANDOM
-  ========================= */
+
+  /* ========================================
+     RANDOM ITEM
+  ======================================== */
+
 
   function randomItem(array) {
 
+
     return array[
+
       Math.floor(
-        Math.random() * array.length
+
+        Math.random()
+
+        *
+
+        array.length
+
       )
+
     ];
+
 
   }
 
 
-  /* =========================
+
+  /* ========================================
      GENERATE REVIEW
-  ========================= */
+  ======================================== */
+
 
   function generateReview() {
 
+
     const step1Selected =
+
       document.querySelectorAll(
+
         "#step1 .option.selected"
+
       );
+
 
 
     const step2Selected =
+
       document.querySelectorAll(
+
         "#step2 .option.selected"
+
       );
 
 
-    /* STEP 1 REQUIRED */
 
-    if (step1Selected.length === 0) {
+    /* ========================================
+       STEP 1 REQUIRED
+    ======================================== */
+
+
+    if (
+
+      step1Selected.length === 0
+
+    ) {
+
 
       alert(
+
         "Please complete Step 1."
+
       );
 
+
       document
-        .getElementById("step1")
+
+        .getElementById(
+
+          "step1"
+
+        )
+
         .scrollIntoView({
+
           behavior: "smooth",
+
           block: "center"
+
         });
 
+
       return;
+
 
     }
 
 
-    /* STEP 2 REQUIRED */
 
-    if (step2Selected.length === 0) {
+    /* ========================================
+       STEP 2 REQUIRED
+    ======================================== */
+
+
+    if (
+
+      step2Selected.length === 0
+
+    ) {
+
 
       alert(
+
         "Please complete Step 2."
+
       );
 
+
       document
-        .getElementById("step2")
+
+        .getElementById(
+
+          "step2"
+
+        )
+
         .scrollIntoView({
+
           behavior: "smooth",
+
           block: "center"
+
         });
+
 
       return;
 
+
     }
+
 
 
     let reviewParts = [];
 
 
+
+    /* ========================================
+       RANDOM OPENING
+    ======================================== */
+
+
     reviewParts.push(
-      randomItem(openings)
+
+      randomItem(
+
+        openings
+
+      )
+
     );
 
 
-    /* STEP 1 */
 
-    step1Selected.forEach(item => {
-
-      const value =
-        item.dataset.value;
+    /* ========================================
+       STEP 1 PHRASES
+    ======================================== */
 
 
-      if (phrases[value]) {
+    step1Selected.forEach(
 
-        reviewParts.push(
-          randomItem(
-            phrases[value]
-          )
-        );
-
-      }
-
-    });
+      item => {
 
 
-    /* STEP 2 */
+        const value =
 
-    step2Selected.forEach(item => {
-
-      const value =
-        item.dataset.value;
+          item.dataset.value;
 
 
-      if (phrases[value]) {
 
-        reviewParts.push(
-          randomItem(
-            phrases[value]
-          )
-        );
+        if (
 
-      }
+          phrases[value]
 
-    });
+        ) {
 
 
-    /* STEP 3 OPTIONAL */
+          reviewParts.push(
 
-    const extraComment =
-      document
-        .getElementById(
-          "extraComment"
-        )
-        .value
-        .trim();
+            randomItem(
 
+              phrases[value]
 
-    if (extraComment) {
+            )
 
-      reviewParts.push(
-        extraComment
-      );
-
-    }
-
-
-    const review =
-      reviewParts.join(" ");
-
-
-    document
-      .getElementById(
-        "reviewText"
-      )
-      .innerText = review;
-
-
-    document
-      .getElementById(
-        "reviewSection"
-      )
-      .style
-      .display = "block";
-
-
-    setTimeout(() => {
-
-      document
-        .getElementById(
-          "reviewSection"
-        )
-        .scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
-    }, 100);
-
-  }
-
-
-  /* =========================
-     COPY REVIEW
-  ========================= */
-
-  function copyReview() {
-
-    const text =
-      document
-        .getElementById(
-          "reviewText"
-        )
-        .innerText
-        .trim();
-
-
-    if (!text) {
-
-      alert(
-        "Please create your review first."
-      );
-
-      return;
-
-    }
-
-
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-
-        const button =
-          document.querySelector(
-            ".copy-btn"
           );
 
 
-        const originalText =
-          button.innerText;
+        }
 
 
-        button.innerText =
-          "✓ Copied";
+      }
+
+    );
 
 
-        setTimeout(() => {
 
-          button.innerText =
-            originalText;
+    /* ========================================
+       STEP 2 PHRASES
+    ======================================== */
 
-        }, 1800);
 
-      });
+    step2Selected.forEach(
+
+      item => {
+
+
+        const value =
+
+          item.dataset.value;
+
+
+
+        if (
+
+          phrases[value]
+
+        ) {
+
+
+          reviewParts.push(
+
+            randomItem(
+
+              phrases[value]
+
+            )
+
+          );
+
+
+        }
+
+
+      }
+
+    );
+
+
+
+    /* ========================================
+       STEP 3 OPTIONAL COMMENT
+    ======================================== */
+
+
+    const extraComment =
+
+      document
+
+        .getElementById(
+
+          "extraComment"
+
+        )
+
+        .value
+
+        .trim();
+
+
+
+    if (
+
+      extraComment
+
+    ) {
+
+
+      reviewParts.push(
+
+        extraComment
+
+      );
+
+
+    }
+
+
+
+    /* ========================================
+       CREATE FINAL REVIEW
+    ======================================== */
+
+
+    const review =
+
+      reviewParts.join(" ");
+
+
+
+    document
+
+      .getElementById(
+
+        "reviewText"
+
+      )
+
+      .innerText = review;
+
+
+
+    document
+
+      .getElementById(
+
+        "reviewSection"
+
+      )
+
+      .style
+
+      .display = "block";
+
+
+
+    /* ========================================
+       SCROLL TO REVIEW
+    ======================================== */
+
+
+    setTimeout(
+
+      () => {
+
+
+        document
+
+          .getElementById(
+
+            "reviewSection"
+
+          )
+
+          .scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "start"
+
+          });
+
+
+      },
+
+      100
+
+    );
+
 
   }
 
+
+
+  /* ========================================
+     COPY REVIEW
+  ======================================== */
+
+
+  function copyReview() {
+
+
+    const text =
+
+      document
+
+        .getElementById(
+
+          "reviewText"
+
+        )
+
+        .innerText
+
+        .trim();
+
+
+
+    if (
+
+      !text
+
+    ) {
+
+
+      alert(
+
+        "Please create your review first."
+
+      );
+
+
+      return;
+
+
+    }
+
+
+
+    navigator.clipboard
+
+      .writeText(
+
+        text
+
+      )
+
+      .then(
+
+        () => {
+
+
+          const button =
+
+            document.querySelector(
+
+              ".copy-btn"
+
+            );
+
+
+
+          const originalText =
+
+            button.innerText;
+
+
+
+          button.innerText =
+
+            "✓ Copied";
+
+
+
+          setTimeout(
+
+            () => {
+
+
+              button.innerText =
+
+                originalText;
+
+
+            },
+
+            1800
+
+          );
+
+
+        }
+
+      );
+
+
+  }
+
+
 </script>
 
+
 </body>
+
 </html>
