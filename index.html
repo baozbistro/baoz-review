@@ -12,6 +12,7 @@
 
   <title>Bao.Z | Share Your Experience</title>
 
+
   <style>
 
     * {
@@ -59,6 +60,7 @@
 
     .hero-logo {
       position: absolute;
+
       left: 20px;
       bottom: 18px;
 
@@ -80,8 +82,11 @@
 
     .card {
       background: #ffffff;
+
       border-radius: 22px;
+
       padding: 24px 19px;
+
       margin-bottom: 18px;
 
       box-shadow:
@@ -418,7 +423,6 @@
         width: 94%;
       }
 
-      /* 手机端顶部照片缩小 */
       .hero {
         height: 150px;
 
@@ -435,7 +439,6 @@
           url("indoor.png") center 40% / cover no-repeat;
       }
 
-      /* 手机端 Logo */
       .hero-logo {
         width: 105px;
         max-width: 34%;
@@ -527,6 +530,7 @@
       Select at least one.
     </p>
 
+
     <div
       class="option-grid"
       id="step1"
@@ -589,6 +593,7 @@
     <p class="instruction">
       Select at least one.
     </p>
+
 
     <div
       class="option-grid"
@@ -653,12 +658,14 @@
       Optional — add something about your experience.
     </p>
 
+
     <textarea
       id="extraComment"
       class="extra-comment"
       placeholder="Optional — add something about your experience"
       maxlength="220"
     ></textarea>
+
 
     <button
       class="generate-btn"
@@ -691,11 +698,13 @@
       Feel free to edit it so it accurately reflects your own experience.
     </p>
 
+
     <div
       class="review-box"
       id="reviewText"
       contenteditable="true"
     ></div>
+
 
     <button
       class="copy-btn"
@@ -703,6 +712,7 @@
     >
       Copy Review
     </button>
+
 
     <button
       class="regenerate-btn"
@@ -721,6 +731,7 @@
   <section class="card platform-card">
 
     <div class="platform-buttons">
+
 
       <a
         class="platform google"
@@ -753,6 +764,7 @@
 
       </a>
 
+
     </div>
 
   </section>
@@ -776,7 +788,9 @@
 </div>
 
 
+
 <script>
+
 
   /* ========================================
      SELECT OPTIONS
@@ -800,110 +814,224 @@
   });
 
 
-  /* ========================================
-     OPENINGS
-  ======================================== */
-
-  const openings = [
-
-    "We had a really nice experience at Bao.Z.",
-
-    "Really enjoyed our visit to Bao.Z.",
-
-    "We had a great meal at Bao.Z.",
-
-    "Bao.Z was a great spot for a casual meal.",
-
-    "We stopped by Bao.Z and had a very enjoyable experience.",
-
-    "We really enjoyed our meal at Bao.Z and had a great experience overall.",
-
-    "This was our first time trying Bao.Z and we really enjoyed it.",
-
-    "We had such an enjoyable meal at Bao.Z.",
-
-    "Had a really good experience at Bao.Z from start to finish.",
-
-    "We came to Bao.Z for a casual meal and ended up really enjoying everything.",
-
-    "Bao.Z was a nice find and we had a very enjoyable meal.",
-
-    "We had a great experience here and really enjoyed the food.",
-
-    "Really happy we decided to try Bao.Z.",
-
-    "We had a very pleasant visit and enjoyed our meal at Bao.Z.",
-
-    "Our meal at Bao.Z was enjoyable from start to finish.",
-
-    "We stopped in for a meal and had a great time at Bao.Z.",
-
-    "Bao.Z made for a really enjoyable and relaxed meal.",
-
-    "We had a pleasant experience and really liked what Bao.Z had to offer."
-
-  ];
-
 
   /* ========================================
-     ENDINGS
+     WRITING STYLES
+
+     Short    = 30%
+     Casual   = 45%
+     Detailed = 25%
   ======================================== */
 
-  const endings = [
 
-    "Overall, we had a really enjoyable meal.",
+  const writingStyles = {
 
-    "We would happily come back again.",
 
-    "Looking forward to trying more of the menu next time.",
+    /* ========================================
+       SHORT
+    ======================================== */
 
-    "We left very satisfied with the experience.",
+    short: {
 
-    "Definitely a place we would visit again.",
+      openings: [
 
-    "It was a really enjoyable meal from start to finish.",
+        "Really enjoyed Bao.Z.",
 
-    "We are glad we gave Bao.Z a try.",
+        "Had a great meal at Bao.Z.",
 
-    "We would definitely recommend giving Bao.Z a try.",
+        "Really nice experience at Bao.Z.",
 
-    "Everything came together for a really enjoyable visit.",
+        "We had a great time at Bao.Z.",
 
-    "We are already looking forward to coming back.",
+        "Glad we stopped by Bao.Z.",
 
-    "It was a nice experience and we would happily return.",
+        "Really enjoyed our meal here.",
 
-    "Overall, it was a very satisfying dining experience."
+        "Had a really good experience here.",
 
-  ];
+        "Bao.Z was a great find.",
+
+        "We really liked Bao.Z.",
+
+        "Had a very enjoyable meal here.",
+
+        "Really happy we tried Bao.Z.",
+
+        "We had a nice visit to Bao.Z."
+
+      ],
+
+
+      endings: [
+
+        "Would definitely come back.",
+
+        "We will be back.",
+
+        "Definitely worth a visit.",
+
+        "Would happily return.",
+
+        "Looking forward to coming back.",
+
+        "We really enjoyed it.",
+
+        "Definitely coming back again.",
+
+        "Would recommend giving it a try.",
+
+        "Overall, a great experience.",
+
+        "We left very satisfied.",
+
+        "Can't wait to come back.",
+
+        "A really enjoyable meal overall."
+
+      ]
+
+    },
+
+
+    /* ========================================
+       CASUAL
+    ======================================== */
+
+    casual: {
+
+      openings: [
+
+        "We stopped by Bao.Z and ended up really enjoying our meal.",
+
+        "Really glad we decided to give Bao.Z a try.",
+
+        "We came in for a casual meal and had a really good experience.",
+
+        "Had such a nice time eating at Bao.Z.",
+
+        "We tried Bao.Z and were really happy with our experience.",
+
+        "This was our first time at Bao.Z and we really enjoyed it.",
+
+        "We were looking for something good to eat and Bao.Z turned out to be a great choice.",
+
+        "Had a really enjoyable meal at Bao.Z from start to finish.",
+
+        "We stopped in without knowing exactly what to expect and really liked it.",
+
+        "Bao.Z turned out to be such a nice spot for a casual meal.",
+
+        "We had been wanting to try Bao.Z and finally stopped by.",
+
+        "Had a great experience at Bao.Z and really enjoyed the food."
+
+      ],
+
+
+      endings: [
+
+        "We would definitely come back and try more next time.",
+
+        "Already looking forward to another visit.",
+
+        "We left happy and would definitely eat here again.",
+
+        "Definitely a place we would come back to.",
+
+        "There are still a few things on the menu we want to try next time.",
+
+        "We had a great time and would happily return.",
+
+        "Really glad we tried it and we will definitely be back.",
+
+        "Overall, it was a really nice meal and a place we would visit again.",
+
+        "We enjoyed everything and are looking forward to coming back.",
+
+        "It was a really satisfying meal and we would definitely return.",
+
+        "We left already talking about what we want to order next time.",
+
+        "Would definitely recommend stopping by if you're in the mood for dumplings and noodles."
+
+      ]
+
+    },
+
+
+    /* ========================================
+       DETAILED
+    ======================================== */
+
+    detailed: {
+
+      openings: [
+
+        "We had a really enjoyable dining experience at Bao.Z and were impressed with the meal overall.",
+
+        "Our visit to Bao.Z was a great experience from the moment we arrived.",
+
+        "We recently had a chance to try Bao.Z and really enjoyed the overall dining experience.",
+
+        "We came to Bao.Z for a relaxed meal and ended up having a very enjoyable experience.",
+
+        "This was our first visit to Bao.Z, and the experience left a really positive impression.",
+
+        "We had been curious about Bao.Z and finally had the chance to stop in for a meal.",
+
+        "Our meal at Bao.Z turned out to be one of those experiences that was enjoyable from start to finish.",
+
+        "We visited Bao.Z for a casual meal and were very pleased with the overall experience.",
+
+        "We had a wonderful time trying Bao.Z and enjoyed several aspects of our visit.",
+
+        "Bao.Z made a great first impression and we really enjoyed our time there.",
+
+        "We recently stopped by Bao.Z and had a very satisfying dining experience.",
+
+        "From the food to the overall experience, we really enjoyed our visit to Bao.Z."
+
+      ],
+
+
+      endings: [
+
+        "Overall, the food and experience made this a place we would be happy to visit again.",
+
+        "We left feeling very satisfied and are already looking forward to exploring more of the menu.",
+
+        "The entire experience came together nicely, and we would definitely return for another meal.",
+
+        "Overall, it was an enjoyable dining experience and one we would happily recommend to others.",
+
+        "We appreciated the overall quality of the experience and would definitely consider coming back.",
+
+        "There are plenty of other dishes we would like to try, so we are looking forward to another visit.",
+
+        "The meal was satisfying from start to finish, and we would happily return again.",
+
+        "Overall, Bao.Z gave us a really positive experience and we are glad we decided to stop by.",
+
+        "Between the food and the overall experience, there was a lot to enjoy about our visit.",
+
+        "It was a well-rounded dining experience and we would definitely like to come back again.",
+
+        "We left with a very positive impression and look forward to trying more dishes in the future.",
+
+        "Overall, we had a great experience and Bao.Z is definitely somewhere we would consider visiting again."
+
+      ]
+
+    }
+
+  };
+
 
 
   /* ========================================
-     CONNECTORS
+     PHRASES
   ======================================== */
 
-  const connectors = [
-
-    "We also liked that",
-
-    "Another thing we appreciated was that",
-
-    "On top of that,",
-
-    "We also really enjoyed that",
-
-    "One thing that stood out was that",
-
-    "Another highlight was that",
-
-    "We especially appreciated that"
-
-  ];
-
-
-  /* ========================================
-     REVIEW PHRASES
-  ======================================== */
 
   const phrases = {
 
@@ -1220,15 +1348,64 @@
   };
 
 
+
   /* ========================================
-     LAST REVIEW MEMORY
+     CONNECTORS
+  ======================================== */
+
+  const casualConnectors = [
+
+    "We also liked that",
+
+    "Another thing we enjoyed was that",
+
+    "On top of that,",
+
+    "We also really liked that",
+
+    "Another highlight was that",
+
+    "We especially enjoyed that",
+
+    "It was also nice that",
+
+    "We appreciated that"
+
+  ];
+
+
+  const detailedConnectors = [
+
+    "Another part of the experience we appreciated was that",
+
+    "One thing that stood out during the meal was that",
+
+    "We also appreciated the fact that",
+
+    "Another highlight of the visit was that",
+
+    "In addition to that,",
+
+    "We were also impressed that",
+
+    "Something else we really enjoyed was that",
+
+    "Another detail that added to the experience was that"
+
+  ];
+
+
+
+  /* ========================================
+     MEMORY
   ======================================== */
 
   let lastReview = "";
 
 
+
   /* ========================================
-     RANDOM ITEM
+     RANDOM
   ======================================== */
 
   function randomItem(array) {
@@ -1240,6 +1417,7 @@
     ];
 
   }
+
 
 
   /* ========================================
@@ -1276,6 +1454,7 @@
   }
 
 
+
   /* ========================================
      CAPITALIZE
   ======================================== */
@@ -1295,13 +1474,147 @@
   }
 
 
+
   /* ========================================
-     BUILD SENTENCE
+     RANDOM WRITING STYLE
   ======================================== */
 
-  function buildSentence(
+  function chooseWritingStyle() {
+
+    const roll =
+      Math.random();
+
+
+    /* SHORT = 30% */
+
+    if (
+      roll < 0.30
+    ) {
+
+      return "short";
+
+    }
+
+
+    /* CASUAL = 45% */
+
+    if (
+      roll < 0.75
+    ) {
+
+      return "casual";
+
+    }
+
+
+    /* DETAILED = 25% */
+
+    return "detailed";
+
+  }
+
+
+
+  /* ========================================
+     HOW MANY DETAILS?
+  ======================================== */
+
+  function getDetailCount(
+    styleName,
+    availableCount
+  ) {
+
+
+    /*
+      SHORT
+      1 or 2 details
+    */
+
+    if (
+      styleName === "short"
+    ) {
+
+      const desired =
+        Math.random() < 0.55
+          ? 1
+          : 2;
+
+      return Math.min(
+        desired,
+        availableCount
+      );
+
+    }
+
+
+    /*
+      CASUAL
+      2 or 3 details
+    */
+
+    if (
+      styleName === "casual"
+    ) {
+
+      const desired =
+        Math.random() < 0.55
+          ? 2
+          : 3;
+
+      return Math.min(
+        desired,
+        availableCount
+      );
+
+    }
+
+
+    /*
+      DETAILED
+      up to 3 details
+    */
+
+    return Math.min(
+      3,
+      availableCount
+    );
+
+  }
+
+
+
+  /* ========================================
+     BUILD SHORT DETAIL
+  ======================================== */
+
+  function buildShortDetail(
+    value
+  ) {
+
+    const phrase =
+      randomItem(
+        phrases[value]
+      );
+
+    return (
+      capitalizeFirst(
+        phrase
+      )
+      +
+      "."
+    );
+
+  }
+
+
+
+  /* ========================================
+     BUILD CASUAL DETAIL
+  ======================================== */
+
+  function buildCasualDetail(
     value,
-    isFirstDetail
+    index
   ) {
 
     const phrase =
@@ -1310,10 +1623,14 @@
       );
 
 
-    if (isFirstDetail) {
+    if (
+      index === 0
+    ) {
 
       return (
-        capitalizeFirst(phrase)
+        capitalizeFirst(
+          phrase
+        )
         +
         "."
       );
@@ -1322,7 +1639,9 @@
 
 
     const connector =
-      randomItem(connectors);
+      randomItem(
+        casualConnectors
+      );
 
 
     return (
@@ -1338,11 +1657,63 @@
   }
 
 
+
+  /* ========================================
+     BUILD DETAILED DETAIL
+  ======================================== */
+
+  function buildDetailedDetail(
+    value,
+    index
+  ) {
+
+    const phrase =
+      randomItem(
+        phrases[value]
+      );
+
+
+    if (
+      index === 0
+    ) {
+
+      return (
+        capitalizeFirst(
+          phrase
+        )
+        +
+        "."
+      );
+
+    }
+
+
+    const connector =
+      randomItem(
+        detailedConnectors
+      );
+
+
+    return (
+      connector
+      +
+      " "
+      +
+      phrase
+      +
+      "."
+    );
+
+  }
+
+
+
   /* ========================================
      GENERATE REVIEW
   ======================================== */
 
   function generateReview() {
+
 
     const step1Selected =
       Array.from(
@@ -1360,7 +1731,9 @@
       );
 
 
-    /* STEP 1 REQUIRED */
+    /* ========================================
+       STEP 1 REQUIRED
+    ======================================== */
 
     if (
       step1Selected.length === 0
@@ -1382,7 +1755,9 @@
     }
 
 
-    /* STEP 2 REQUIRED */
+    /* ========================================
+       STEP 2 REQUIRED
+    ======================================== */
 
     if (
       step2Selected.length === 0
@@ -1404,8 +1779,9 @@
     }
 
 
+
     /* ========================================
-       COMBINE ALL SELECTIONS
+       ALL SELECTED OPTIONS
     ======================================== */
 
     const allSelected = [
@@ -1417,40 +1793,23 @@
     ];
 
 
-    /*
-      1-3 个选择：
-      全部写进去。
 
-      4 个或更多：
-      随机抽取 3 个重点。
+    /* ========================================
+       USER COMMENT
+    ======================================== */
 
-      这样可以避免评论太长，
-      同样的选择也能产生不同内容。
-    */
+    const extraComment =
+      document
+        .getElementById(
+          "extraComment"
+        )
+        .value
+        .trim();
 
-    let selectedForReview;
-
-
-    if (
-      allSelected.length <= 3
-    ) {
-
-      selectedForReview =
-        shuffle(allSelected);
-
-    }
-
-    else {
-
-      selectedForReview =
-        shuffle(allSelected)
-          .slice(0, 3);
-
-    }
 
 
     /* ========================================
-       CREATE DIFFERENT VERSION
+       BUILD A NEW VERSION
     ======================================== */
 
     let finalReview = "";
@@ -1460,56 +1819,142 @@
 
     do {
 
+
+      /* ========================================
+         CHOOSE STYLE
+      ======================================== */
+
+      const styleName =
+        chooseWritingStyle();
+
+
+      const style =
+        writingStyles[
+          styleName
+        ];
+
+
+      /* ========================================
+         CHOOSE NUMBER OF DETAILS
+      ======================================== */
+
+      const detailCount =
+        getDetailCount(
+          styleName,
+          allSelected.length
+        );
+
+
+      /* ========================================
+         RANDOMLY SELECT DETAILS
+      ======================================== */
+
+      const selectedForReview =
+        shuffle(
+          allSelected
+        )
+        .slice(
+          0,
+          detailCount
+        );
+
+
       const reviewParts = [];
 
 
-      /* RANDOM OPENING */
+      /* ========================================
+         OPENING
+      ======================================== */
 
       reviewParts.push(
-        randomItem(openings)
+
+        randomItem(
+          style.openings
+        )
+
       );
 
 
-      /* RANDOM DETAILS */
+      /* ========================================
+         DETAILS
+      ======================================== */
 
       selectedForReview.forEach(
         (item, index) => {
+
 
           const value =
             item.dataset.value;
 
 
           if (
-            phrases[value]
+            !phrases[value]
+          ) {
+
+            return;
+
+          }
+
+
+          /* SHORT */
+
+          if (
+            styleName === "short"
           ) {
 
             reviewParts.push(
 
-              buildSentence(
-                value,
-                index === 0
+              buildShortDetail(
+                value
               )
 
             );
 
           }
 
+
+          /* CASUAL */
+
+          else if (
+            styleName === "casual"
+          ) {
+
+            reviewParts.push(
+
+              buildCasualDetail(
+                value,
+                index
+              )
+
+            );
+
+          }
+
+
+          /* DETAILED */
+
+          else {
+
+            reviewParts.push(
+
+              buildDetailedDetail(
+                value,
+                index
+              )
+
+            );
+
+          }
+
+
         }
+
       );
 
 
       /* ========================================
          STEP 3 OPTIONAL
       ======================================== */
-
-      const extraComment =
-        document
-          .getElementById(
-            "extraComment"
-          )
-          .value
-          .trim();
-
 
       if (
         extraComment
@@ -1522,41 +1967,62 @@
       }
 
 
-      /* RANDOM ENDING */
+      /* ========================================
+         ENDING
+      ======================================== */
 
       reviewParts.push(
-        randomItem(endings)
+
+        randomItem(
+          style.endings
+        )
+
       );
 
 
-      /* JOIN */
+      /* ========================================
+         FINAL REVIEW
+      ======================================== */
 
       finalReview =
-        reviewParts.join(" ");
+        reviewParts
+          .join(" ")
+          .replace(
+            /\s+/g,
+            " "
+          )
+          .trim();
 
 
       attempts++;
 
 
     }
+
     while (
 
       finalReview === lastReview
 
       &&
 
-      attempts < 12
+      attempts < 20
 
     );
 
 
-    /* SAVE LAST VERSION */
+
+    /* ========================================
+       SAVE LAST VERSION
+    ======================================== */
 
     lastReview =
       finalReview;
 
 
-    /* SHOW REVIEW */
+
+    /* ========================================
+       SHOW REVIEW
+    ======================================== */
 
     document
       .getElementById(
@@ -1575,7 +2041,10 @@
       "block";
 
 
-    /* SCROLL TO REVIEW */
+
+    /* ========================================
+       SCROLL TO REVIEW
+    ======================================== */
 
     setTimeout(
       () => {
@@ -1596,6 +2065,7 @@
   }
 
 
+
   /* ========================================
      COPY REVIEW
   ======================================== */
@@ -1611,7 +2081,9 @@
         .trim();
 
 
-    if (!text) {
+    if (
+      !text
+    ) {
 
       alert(
         "Please create your review first."
@@ -1623,36 +2095,42 @@
 
 
     navigator.clipboard
-      .writeText(text)
-      .then(() => {
+      .writeText(
+        text
+      )
+      .then(
+        () => {
 
-        const button =
-          document.querySelector(
-            ".copy-btn"
+          const button =
+            document.querySelector(
+              ".copy-btn"
+            );
+
+
+          const originalText =
+            button.innerText;
+
+
+          button.innerText =
+            "✓ Copied";
+
+
+          setTimeout(
+            () => {
+
+              button.innerText =
+                originalText;
+
+            },
+            1800
           );
 
+        }
 
-        const originalText =
-          button.innerText;
-
-
-        button.innerText =
-          "✓ Copied";
-
-
-        setTimeout(
-          () => {
-
-            button.innerText =
-              originalText;
-
-          },
-          1800
-        );
-
-      });
+      );
 
   }
+
 
 </script>
 
